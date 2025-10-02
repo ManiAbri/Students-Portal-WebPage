@@ -260,7 +260,7 @@ li {
 /* -----------scrollbar------------ */
 
 ::-webkit-scrollbar {
-    width: 13px; 
+    width: 13px;
 }
 
 ::-webkit-scrollbar-track {
@@ -268,8 +268,8 @@ li {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient( rgb(46, 71, 125) ,  rgb(51, 79, 140),  rgb(55, 88, 159), rgb(75, 118, 212) , rgb(51, 79, 140));
-    border-radius: 10px; 
+    background: linear-gradient(rgb(46, 71, 125), rgb(51, 79, 140), rgb(55, 88, 159), rgb(75, 118, 212), rgb(51, 79, 140));
+    border-radius: 10px;
     /* border: 3px solid #3A1F04; */
 }
 
@@ -501,44 +501,44 @@ p {
 }
 
 /* 
-***** aboutCoffee *****
+***** aboutCompany *****
 */
 
-#aboutCoffee {
+#aboutCompany {
     padding-top: 0;
 }
 
-#aboutCoffee .row {
+#aboutCompany .row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: -5%;
 }
 
-#aboutCoffee .row .content {
+#aboutCompany .row .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#aboutCoffee .row .content h1 {
+#aboutCompany .row .content h1 {
     width: 100%;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--clr-primary);
 }
 
-#aboutCoffee .row .content h1 span:nth-child(1) {
+#aboutCompany .row .content h1 span:nth-child(1) {
     font-weight: 400;
 }
 
-#aboutCoffee .row .content h1 span:nth-child(3) {
+#aboutCompany .row .content h1 span:nth-child(3) {
     color: var(--clr-default);
     font-size: 32px;
 }
 
-#aboutCoffee .row .content p {
+#aboutCompany .row .content p {
     color: #989898;
     font-size: 1.1rem;
 }
@@ -548,7 +548,7 @@ p {
 /* 
 ***** Footer *****
 */
-  
+
 #footer {
     position: relative;
     background-image: url(assets/img/footer/14.jpg);
@@ -568,7 +568,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.49); 
+    background-color: rgba(0, 0, 0, 0.49);
     border-top-right-radius: 15%;
     z-index: 1;
 }
@@ -641,7 +641,7 @@ p {
 
 /* ------------ */
 
-#footer  .row .footer-item3 p {
+#footer .row .footer-item3 p {
     color: white;
     display: inline;
 }
@@ -702,11 +702,11 @@ p {
 
 
 #footer .footer-hr {
-    border: none; 
+    border: none;
     position: absolute;
     height: 0.375%;
-    background-color: var(--clr-default); 
-    width: 80%; 
+    background-color: var(--clr-default);
+    width: 80%;
     margin: 20px auto;
     top: 68%;
     z-index: 2;
@@ -775,7 +775,7 @@ p {
 
 
 .copy-right {
-    background-color: rgba(0, 0, 0, 0.805); 
+    background-color: rgba(0, 0, 0, 0.805);
     color: white;
 }
 
@@ -783,3 +783,444 @@ p {
     color: rgb(73, 110, 189);
 }
 
+
+
+/* ------------------------Responsives--------------------------- */
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    /* Header */
+    #header {
+        margin-top: 4%;
+        padding: 1rem;
+    }
+
+    #header .container {
+        padding: 1rem;
+    }
+
+    .logo-image {
+        width: 90px;
+        height: 90px;
+        left: 2%;
+    }
+
+    .clubBtn {
+        font-size: 0.75rem;
+        top: 40%;
+        right: 2%;
+        padding: 7px 11px;
+    }
+
+    #header nav ul.nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    #header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #header .form-controlse {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    #hero-static .row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    #hero-static .row .content h1 {
+        margin-top: -4%;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #hero-static .row .content p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* About Company Section */
+    #aboutCompany .row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    #aboutCompany .row .content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #aboutCompany .row .content p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    #aboutCompany .row .images img {
+        margin-top: 5%;
+    }
+
+    /* Team Section */
+    .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .member {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+
+    .member img {
+        width: 100%;
+        height: auto;
+    }
+
+    .member h2 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .member p {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+        border-top-right-radius: 0;
+        padding: 2rem 1rem;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+
+    }
+
+    #footer .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #footer .footer-item {
+        text-align: center;
+    }
+
+    /* Footer Item 1: image and text side by side */
+    #footer .footer-item1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+        width: 100% !important;
+    }
+
+    .footer-item1-img,
+    .footer-item1-p {
+        flex: 1;
+        /* هر کدام نصف عرض را می‌گیرند */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer .footer-item1 img {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    #footer .footer-item1 p {
+        color: white;
+        font-size: 1rem;
+        /* text-align: right; */
+        margin: 0;
+    }
+
+    /* Footer Items 2, 3, 4: in one row, centered */
+    #footer .footer-item2,
+    #footer .footer-item3,
+    #footer .footer-item4 {
+        flex: 0 0 90%;
+        max-width: 30%;
+        margin: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #footer .footer-item2 p,
+    #footer .footer-item3 p,
+    #footer .footer-item4 p {
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #footer .footer-item2 .fi2-div a,
+    #footer .footer-item3 .fi2-div a,
+    #footer .footer-item4 .fi2-div a {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        display: block;
+        margin: 0.25rem 0;
+    }
+
+    #footer .footer-item2 .bi-circle-fill,
+    #footer .footer-item3 .bi-circle-fill,
+    #footer .footer-item4 .bi-circle-fill {
+        font-size: 10px;
+        color: var(--clr-default);
+    }
+
+    /* Footer iframe */
+    #footer iframe {
+        position: static;
+        width: 100%;
+        height: 200px;
+        margin: 1rem auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    /* Footer HR */
+    #footer .footer-hr {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        height: 2px;
+        background-color: var(--clr-default);
+    }
+
+    /* Social Media */
+    #footer .socialmedia-p {
+        position: static;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 1rem;
+    }
+
+    #footer .socialmedia-div {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    #footer .socialmedia-div .bi {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Copy Right */
+    .copy-right {
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .copy-right span {
+        color: rgb(73, 110, 189);
+        font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (min-width: 321px) and (max-width: 480px) {
+        .clubBtn {
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width: 320px) {
+        .clubBtn {
+            font-size: 0.7rem;
+        }
+
+        #hero-static .row .content h1,
+        #aboutCompany .row .content h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .logo-image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .clubBtn {
+            font-size: 0.9rem;
+        }
+
+        #hero-static .row,
+        #aboutCompany .row {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .team {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .member {
+            flex: 1 1 45%;
+        }
+
+        #footer {
+            height: auto;
+            padding-bottom: 2rem;
+        }
+
+        #footer .row {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        #footer .footer-item {
+            width: 45%;
+            margin: 1rem 0;
+        }
+
+        #footer iframe {
+            width: 90%;
+            height: 250px;
+            position: static;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        #footer .footer-hr {
+            position: static;
+            width: 90%;
+            margin: 1rem auto;
+        }
+
+        #footer .socialmedia-div,
+        #footer .socialmedia-p {
+            position: static;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+
+    /* iPads (landscape) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .clubBtn {
+            font-size: 1rem;
+        }
+    }
+
+    /* iPads (portrait) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .clubBtn {
+            font-size: 0.9rem;
+        }
+    }
+
+    /********** iPad 3 **********/
+    /* Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        #footer iframe {
+            height: 250px;
+        }
+    }
+
+    /* Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        #footer iframe {
+            height: 250px;
+        }
+    }
+
+    /* Desktops and laptops ----------- */
+    @media only screen and (min-width: 1224px) {
+        .team {
+            flex-wrap: nowrap;
+        }
+
+        .member {
+            flex: 1 1 22%;
+        }
+    }
+
+    /* Large screens ----------- */
+    @media only screen and (min-width: 1824px) {
+        .container {
+            max-width: 1400px;
+        }
+
+        #hero-static .row .content h1,
+        #aboutCompany .row .content h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    /* iPhone 4 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        .clubBtn {
+            font-size: 0.7rem;
+        }
+
+        #footer iframe {
+            height: 180px;
+        }
+    }
+
+}
