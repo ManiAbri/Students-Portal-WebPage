@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه ثبت نام</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="typed-wrapper">
+    <span id="typed-text"></span>
+  </div>
+
+  <div class="container">
+    <h2>ثبت نام در سامانه</h2>
+
+    <form id="signup-form">
+
+      <input type="text" id="username" placeholder="نام کاربری" required>
+
+      <!-- <input type="password" id="password" placeholder="رمز عبور" required> -->
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="رمز عبور" required>
+        <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+      </div>
+
+
+      <div>
+        <input type="submit" class="submit" value="ثبت نام">
+        <a href="foodRes.html" class="linktoPage"></a>
+      </div>
+
+    </form>
+
+    <p>حساب کاربری دارید؟ <a href="login.html">وارد شوید</a></p>
+
+  </div>
+
+  <!-- پیام موفقیت یا خطا -->
+  <div id="message" style="margin-top:10px; font-weight: bold;"></div>
+
+  <marquee behavior="alternate" direction="up" scrollamount="6">
+    <div class="bubble1" style="left: 5%; top: 10%; padding: 20px;"></div>
+    <div class="bubble2" style="left: 20%; top: 30%; padding: 20px"></div>
+    <div class="bubble4" style="right: 5%; top: 70%; padding: 20px"></div>
+    <div class="bubble5" style="right: 20%; top: 90%; padding: 20px"></div>
+  </marquee>
+
+
+  <script src="assets/vendor/typed.js-master/typed.js-master/lib/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="signup.js"></script>
+</body>
+
+</html>
