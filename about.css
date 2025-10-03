@@ -925,7 +925,6 @@ p {
         background-size: cover;
         background-position: center;
         text-align: center;
-
     }
 
     #footer .row {
@@ -977,10 +976,27 @@ p {
     #footer .footer-item3,
     #footer .footer-item4 {
         flex: 0 0 90%;
-        max-width: 30%;
+        /* max-width: 30%; */
         margin: 0.5rem;
         font-size: 1rem;
         text-align: center;
+    }
+
+    #footer .footer-item2 {
+        width: 50% !important;
+        margin-right: -45% !important;
+        margin-top: 2% !important;
+    }
+
+    #footer .footer-item3 {
+        width: 50% !important;
+        margin-right: 45% !important;
+        margin-top: -28% !important;
+    }
+
+    #footer .footer-item4 {
+        width: 50% !important;
+        margin: 0 !important;
     }
 
     #footer .footer-item2 p,
@@ -1061,43 +1077,35 @@ p {
         color: rgb(73, 110, 189);
         font-weight: bold;
     }
+}
 
 
 
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .clubBtn {
+        font-size: 0.8rem;
+    }
+}
 
-
-
-
-
-
-
-
-
-    /* Smartphones (landscape) ----------- */
-    @media only screen and (min-width: 321px) and (max-width: 480px) {
-        .clubBtn {
-            font-size: 0.8rem;
-        }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+    .clubBtn {
+        font-size: 0.7rem;
     }
 
-    /* Smartphones (portrait) ----------- */
-    @media only screen and (max-width: 320px) {
-        .clubBtn {
-            font-size: 0.7rem;
-        }
-
-        #hero-static .row .content h1,
-        #aboutCompany .row .content h1 {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 0.9rem;
-        }
+    #hero-static .row .content h1,
+    #aboutCompany .row .content h1 {
+        font-size: 2rem;
     }
 
-    /* iPads (portrait and landscape) ----------- */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         .logo-image {
             width: 80px;
             height: 80px;
@@ -1157,70 +1165,229 @@ p {
             text-align: center;
             margin-top: 1rem;
         }
+    } */
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body {
+        font-size: 16px;
     }
 
-    /* iPads (landscape) ----------- */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-        .clubBtn {
-            font-size: 1rem;
-        }
+    .container {
+        max-width: 90%;
+        padding: 2rem;
     }
 
-    /* iPads (portrait) ----------- */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-        .clubBtn {
-            font-size: 0.9rem;
-        }
+    /* Header */
+    #header {
+        padding: 1rem;
     }
 
-    /********** iPad 3 **********/
-    /* Landscape */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-        #footer iframe {
-            height: 250px;
-        }
+    .logo-image {
+        width: 80px;
+        height: 80px;
+        left: 2%;
     }
 
-    /* Portrait */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        #footer iframe {
-            height: 250px;
-        }
+    .clubBtn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        top: 37%;
+        right: 2%;
     }
 
-    /* Desktops and laptops ----------- */
-    @media only screen and (min-width: 1224px) {
-        .team {
-            flex-wrap: nowrap;
-        }
-
-        .member {
-            flex: 1 1 22%;
-        }
+    #header nav ul.nav-list {
+        gap: 1rem;
     }
 
-    /* Large screens ----------- */
-    @media only screen and (min-width: 1824px) {
-        .container {
-            max-width: 1400px;
-        }
-
-        #hero-static .row .content h1,
-        #aboutCompany .row .content h1 {
-            font-size: 3.5rem;
-        }
+    #header .form-controlse {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 
-    /* iPhone 4 ----------- */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-        .clubBtn {
-            font-size: 0.7rem;
-        }
-
-        #footer iframe {
-            height: 180px;
-        }
+    /* Hero Section */
+    #hero-static .row,
+    #aboutCompany .row {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 
+    #hero-static .row .content h1,
+    #aboutCompany .row .content h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero-static .row .content p,
+    #aboutCompany .row .content p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    /* Team Section */
+    .team {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .member {
+        flex: 0 0 45%;
+        max-width: 45%;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .member h2 {
+        font-size: 1.2rem;
+    }
+
+    .member p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+        padding: 2rem 1rem;
+        border-top-right-radius: 0;
+    }
+
+    #footer .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #footer .footer-item {
+        flex: 0 0 45%;
+        max-width: 30%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    #footer .footer-item1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #footer .footer-item1 img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #footer .footer-item1 p {
+        font-size: 1rem;
+        color: white;
+        max-width: 70%;
+        margin-right: 15%;
+    }
+
+    #footer .footer-item2 {
+        margin-right: -10% !important;
+    }
+
+
+    #footer .footer-item3 {
+        margin-top: 0% !important;
+        margin-right: -5% !important;
+    }
+
+
+    #footer iframe {
+        position: static;
+        width: 70%;
+        height: 250px;
+        margin: 3rem auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    #footer .footer-hr {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        height: 2px;
+        background-color: var(--clr-default);
+    }
+
+    #footer .socialmedia-div,
+    #footer .socialmedia-p {
+        position: static;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .copy-right {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .clubBtn {
+        font-size: 1rem;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .clubBtn {
+        font-size: 0.9rem;
+    }
+}
+
+/********** iPad 3 **********/
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    #footer iframe {
+        height: 250px;
+    }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    #footer iframe {
+        height: 250px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+    .team {
+        flex-wrap: nowrap;
+    }
+
+    .member {
+        flex: 1 1 22%;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    #hero-static .row .content h1,
+    #aboutCompany .row .content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .clubBtn {
+        font-size: 0.7rem;
+    }
+
+    #footer iframe {
+        height: 180px;
+    }
 }
