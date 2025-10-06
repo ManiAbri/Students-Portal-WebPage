@@ -274,3 +274,15 @@ marquee {
         padding: 10px;
     }
 }
+
+
+
+@media only screen and (max-width: 319px) {
+    marquee {
+        display: none;
+    }
+
+    #typed-wrapper {
+        display: none;
+    }
+}
