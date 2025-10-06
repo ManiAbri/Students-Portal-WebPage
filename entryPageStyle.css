@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  background: #5882b4;
+  color: white;
+  padding: 20px;
+  width: 210px;
+  height: 60%;
+  margin-top: 10%;
+  margin-right: 2%;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 13% 0;
+  cursor: pointer;
+  border: 5px solid transparent; /* جا برای border رزرو شده */
+}
+
+.sidebar li:hover {
+  background-color: whitesmoke;
+  /*transform: scale(1.09);*/
+  border-radius: 10%;
+  color: #5882b4;
+}
+
+.sidebar li:hover a {
+  color: #5882b4;
+}
+
+.sidebar .sidebarLine {
+  width: 100%;
+  height: 1%;
+  background-color: white;
+  margin-top: -15%;
+}
+
+
+
+/* --------------------------header---------------------------- */
+
+header {
+    height: 10%;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(54, 115, 201, 0.825);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6875rem;
+    font-weight: 600;
+    color: rgba(54, 115, 201, 0.825);
+}
+
+
+.message .logout-icn {
+    height: 6rem;
+    /* position: relative;
+    left: -3%;
+    top: -100%; */
+    margin-left: -4%;
+    margin-top: -0.2%;
+}
+
+
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+  position: absolute;
+  left: 40%;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 6rem;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 2.8125rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #ededed;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+    outline: none;
+    border: none;
+}
+
+.searchbtn {
+    width: 3.125rem;
+    height: 2.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.message {
+    gap: 2.5rem;
+    position: absolute;
+    left: -59%;
+    cursor: pointer;
+}
+
+.dpicn {
+  width: 4%;
+  height: 4%;
+  margin-left: -100%;
+}
+
+.srchicn {
+  height: 1.3rem;
+}
+
+
+/* --------------------------loading page---------------------------- */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease-out;
+  z-index: 9999;
+}
+
+
+.slide-up {
+  transform: translateY(-100%);
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader2 {
+  margin-top: -5%;
+  width: fit-content;
+  font-size: 80px;
+  line-height: 1.5;
+  font-family: system-ui,sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0000;
+  -webkit-text-stroke: 1px #000;
+  background:
+    radial-gradient(1.13em at 50% 1.6em,#000 99%,#0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+    radial-gradient(1.13em at 50% -0.8em,#0000 99%,#000 101%) 50% .8em/3.2em 100% repeat-x  text;
+  animation: l9 2s linear infinite;
+}
+.loader2:before {
+  content: "در حال بارگذاری";
+}
+@keyframes l9 {
+  to {background-position: calc(50% + 1.6em) 0,calc(50% + 3.2em) .8em}
+}
+
+
+
+/* ------------------------------- */
+
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-top: 14%;
+    background-color: #dcd8d8;
+    border-radius: 10px;
+    width: 60%;
+    height: 55%;
+    box-shadow: 2px 6px 12px black;
+}
+
+.container h2 {
+    margin-top: 5%;
+}
+
+.container .bi {
+  font-size: 28px;
+  color: black;
+}
+
+
+.container .UniLOGO {
+  width: 20%;
+  margin-top: -50%;
+  margin-left: -80%;
+}
