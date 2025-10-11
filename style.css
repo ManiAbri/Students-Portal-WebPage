@@ -1,0 +1,324 @@
+/* styles for foodRes.html page */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  background: #5882b4;
+  color: white;
+  padding: 20px;
+  width: 210px;
+  height: 60%;
+  margin-top: 10%;
+  margin-right: 2%;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 13% 0;
+  cursor: pointer;
+  border: 5px solid transparent; /* جا برای border رزرو شده */
+}
+
+.sidebar li:hover {
+  background-color: whitesmoke;
+  /*transform: scale(1.09);*/
+  border-radius: 10%;
+  color: #5882b4;
+}
+
+.sidebar li:hover a {
+  color: #5882b4;
+}
+
+.sidebar .sidebarLine {
+  width: 100%;
+  height: 1%;
+  background-color: white;
+  margin-top: -15%;
+}
+
+/* ------------------------------------------------ */
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f4f4f4;
+  margin-top: 6%;
+
+}
+
+.wallet {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* .foods {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+} */
+
+.foods div {
+  border: 1px solid #ddd;
+  padding: 10px;
+  /* background: #eee; */
+  cursor: pointer;
+}
+
+.reservations table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+}
+
+.reservations th,
+.reservations td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* .food-item {
+  width: 120px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+} */
+.food-name {
+  background: rgba(0,0,0,0.6);
+  padding: 5px;
+}
+.food-price {
+  background: rgba(0,0,0,0.4);
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.foods {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.food-item {
+  width: 150px;
+  height: 110px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(assets/img/kabab.jpg); */
+  color: white;
+}
+
+.food-item:nth-child(3) {
+  background-image: url(assets/img/zereshkpolo.jpg);
+    background-size: cover;
+    opacity: 50%;
+}
+
+.food-item:nth-child(2) {
+  background-image: url(assets/img/gorme.jpg );
+  background-size: cover;
+  opacity: 50%;
+}
+
+.food-item:nth-child(1) {
+  background-image: url(assets/img/kabab.jpg);
+    background-size: cover;
+    opacity: 50%;
+}
+
+.food-item:hover {
+  background-color: #f8f8f8;
+}
+
+.food-item.selected {
+  border: 3px solid red;
+}
+
+
+
+/* --------------------------header---------------------------- */
+
+header {
+    height: 10%;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(54, 115, 201, 0.825);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6875rem;
+    font-weight: 600;
+    color: rgba(54, 115, 201, 0.825);
+}
+
+
+.message .logout-icn {
+    height: 6rem;
+    /* position: relative;
+    left: -3%;
+    top: -100%; */
+    margin-left: -4%;
+    margin-top: -0.2%;
+}
+
+
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+  position: absolute;
+  left: 40%;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 6rem;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 2.8125rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #ededed;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+    outline: none;
+    border: none;
+}
+
+.searchbtn {
+    width: 3.125rem;
+    height: 2.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.message {
+    gap: 2.5rem;
+    position: absolute;
+    left: -59%;
+    cursor: pointer;
+}
+
+.dpicn {
+  width: 4%;
+  height: 4%;
+  margin-left: -100%;
+}
+
+.srchicn {
+  height: 1.3rem;
+}
+
+/* -------------about us styles------------------ */
+
+.aboutUS {
+  text-decoration: none;
+  position: absolute;
+  left: 25%;
+  top: 26%;
+  background-color: #5882b4;
+  padding: 9px;
+  border-radius: 20%;
+  color: white;
+}
+
+.aboutUS:hover {
+  background-color: #75a4df;
+}
