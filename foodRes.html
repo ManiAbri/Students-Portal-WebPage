@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رزرو غذا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <header>
+
+        <div class="logosec">
+            <div class="logo">سامانه تبریزیم</div>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="جستجو">
+            <div class="searchbtn">
+                <img src="assets/img/header/[CITYPNG.COM]Download Black Search Icon Button PNG - 700x700.png" class="icn srchicn" alt="search-icon">
+            </div>
+        </div>
+        
+        <div class="aboutDiv">
+          <a href="about.html" class="aboutUS">درباره ما</a>
+        </div>
+
+        <div class="message">
+            <img src="assets/img/header/—Pngtree—box logout icon vectors_5053769.png" class="logout-icn" alt="">
+            <div class="dp">
+                <img src="assets/img/header/pngkey.com-profile-icon-png-2024792.png" class="dpicn" alt="dp">
+            </div>
+        </div>
+
+    </header>
+    
+
+  
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>داشبورد</h2> 
+      <div class="sidebarLine"></div>
+      <ul>
+        <li><a href="#">رزرو غذا</a></li>
+        <li><a href="request-page.html" class="active">درخواست‌ها</a></li>
+        <li><a href="lessons.html">لیست دروس نیمسال</a></li>
+        <li><a href="pay.html">پرداخت‌ها و امور مالی</a></li>
+        <li><a href="messages.html">پیام‌ها و اطلاعیه‌ها</a></li>
+        <li><a href="profile.html">پروفایل شخصی</a></li>
+      </ul>
+    </aside>
+
+    <!--------------------------------------->
+
+
+    <main class="content">
+      <section class="wallet">
+        <p>موجودی: <span id="balance">10000</span> تومان</p>
+        <button onclick="increaseBalance()">افزایش موجودی</button>
+      </section>
+      <section class="form">
+        <label for="restaurant">رستوران:</label>
+        <select id="restaurant">
+          <option>رستوران مرکزی</option>
+          <option>رستوران شماره ۲</option>
+        </select>
+
+        <label for="date">تاریخ:</label>
+        <input type="date" id="date">
+
+        <div class="foods" id="foods">
+          <!-- غذاها به صورت تصویر، نام و قیمت اضافه خواهند شد -->
+        </div>
+
+        <button onclick="addReservation()">افزودن</button>
+        <button onclick="saveEditedReservation()">ذخیره تغییرات</button>
+      </section>
+
+      <section class="reservations">
+        <table>
+          <thead>
+            <tr>
+              <th>تاریخ</th>
+              <th>غذا</th>
+              <th>عملیات</th>
+            </tr>
+          </thead>
+          <tbody id="reservationList">
+            <!-- رزروها نمایش داده می‌شوند -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
