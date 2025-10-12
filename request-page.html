@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>درخواست‌ها</title>
+  <link rel="stylesheet" href="requestpageStyle.css" />
+</head>
+
+<body>
+
+
+
+  <header>
+
+        <div class="logosec">
+            <div class="logo">سامانه تبریزیم</div>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="جستجو">
+            <div class="searchbtn">
+                <img src="assets/img/header/[CITYPNG.COM]Download Black Search Icon Button PNG - 700x700.png" class="icn srchicn" alt="search-icon">
+            </div>
+        </div>
+
+        <div class="aboutDiv">
+          <a href="about.html" class="aboutUS">درباره ما</a>
+        </div>
+        
+        <div class="message">
+            <img src="assets/img/header/—Pngtree—box logout icon vectors_5053769.png" class="logout-icn" alt="">
+            <div class="dp">
+                <img src="assets/img/header/pngkey.com-profile-icon-png-2024792.png" class="dpicn" alt="dp">
+            </div>
+        </div>
+
+    </header>
+
+
+
+  <div class="container container2">
+    
+    <aside class="sidebar">
+      <h2>داشبورد</h2>
+      <div class="sidebarLine"></div>
+      <ul>
+        <li><a href="foodRes.html">رزرو غذا</a></li>
+        <li><a href="#" class="active">درخواست‌ها</a></li>
+        <li><a href="lessons.html">لیست دروس نیمسال</a></li>
+        <li><a href="pay.html">پرداخت‌ها و امور مالی</a></li>
+        <li><a href="messages.html">پیام‌ها و اطلاعیه‌ها</a></li>
+        <li><a href="profile.html">پروفایل شخصی</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>درخواست جدید</h1>
+      <form id="requestForm" class="request-form">
+        <label>عنوان درخواست:</label>
+        <input type="text" name="title" required />
+
+        <label>توضیحات:</label>
+        <textarea name="description" rows="4" required></textarea>
+
+        <label>آپلود فایل:</label>
+        <input type="file" name="file"/>
+
+        <button type="submit">ثبت درخواست</button>
+      </form>
+
+      <h2 style="margin-top: 40px;">درخواست‌های ثبت‌شده</h2>
+      <table class="request-table">
+        <thead>
+          <tr>
+            <th>عنوان</th>
+            <th>شماره پیگیری</th>
+            <th>وضعیت</th>
+            <th>فایل</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+        <tbody id="requestList">
+          
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script>
+    const form = document.getElementById('requestForm');
+    const requestList = document.getElementById('requestList');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const title = form.title.value;
+      const description = form.description.value;
+      const trackingNumber = 'REQ' + Math.floor(Math.random() * 10000);
+      const status = 'در حال بررسی';
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${title}</td>
+        <td>${trackingNumber}</td>
+        <td>${status}</td>
+        <td>
+          <button onclick="editRequest(this)">✏️</button>
+          <button onclick="deleteRequest(this)">🗑️</button>
+        </td>
+        <td>
+          <span class="file-display">${req.filePath ? `<a href="http://localhost:3000${req.filePath}" target="_blank">📂 مشاهده فایل</a>` : 'بدون فایل'}</span>
+        </td>
+
+      `;
+
+      requestList.appendChild(row);
+      form.reset();
+    });
+
+    function deleteRequest(button) {
+      button.parentElement.parentElement.remove();
+    }
+
+    function editRequest(button) {
+      alert("فعلاً بخش ویرایش فقط به صورت ظاهری پیاده‌سازی شده است.");
+    }
+  </script>
+
+  <script src="request.js"></script>
+</body>
+
+
+</html>
+
+
