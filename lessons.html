@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>لیست دروس نیمسال</title>
+  <link rel="stylesheet" href="lessonsStyle.css">
+</head>
+
+<body>
+
+
+  <header>
+
+        <div class="logosec">
+            <div class="logo">سامانه تبریزیم</div>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="جستجو">
+            <div class="searchbtn">
+                <img src="assets/img/header/[CITYPNG.COM]Download Black Search Icon Button PNG - 700x700.png" class="icn srchicn" alt="search-icon">
+            </div>
+        </div>
+
+        <div class="aboutDiv">
+          <a href="about.html" class="aboutUS">درباره ما</a>
+        </div>
+        
+        <div class="message">
+            <img src="assets/img/header/—Pngtree—box logout icon vectors_5053769.png" class="logout-icn" alt="">
+            <div class="dp">
+                <img src="assets/img/header/pngkey.com-profile-icon-png-2024792.png" class="dpicn" alt="dp">
+            </div>
+        </div>
+
+    </header>
+
+
+  <div class="dashboard">
+    
+    <aside class="sidebar">
+      <h2>داشبورد</h2> 
+      <div class="sidebarLine"></div>
+      <ul>
+        <li><a href="foodRes.html">رزرو غذا</a></li>
+        <li><a href="request-page.html">درخواست‌ها</a></li>
+        <li><a href="#" class="active">لیست دروس نیمسال</a></li>
+        <li><a href="pay.html">پرداخت‌ها و امور مالی</a></li>
+        <li><a href="messages.html">پیام‌ها و اطلاعیه‌ها</a></li>
+        <li><a href="profile.html">پروفایل شخصی</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1 class="page-title">لیست دروس نیمسال</h1>
+
+      <div class="course-list">
+        <div class="course-card" onclick="showCourse('نظریه زبان')">نظریه زبان</div>
+        <div class="course-card" onclick="showCourse('برنامه نویسی وب')"> برنامه‌نویسی وب</div>
+        <div class="course-card" onclick="showCourse('انتقال داده')">انتقال داده</div>
+        <div class="course-card" onclick="showCourse('روش پژوهش و ارائه')">روش پژوهش و ارائه</div>
+        <div class="course-card" onclick="showCourse('آز ریزپردازنده')">آز ریزپردازنده</div>
+
+      </div>
+
+      <div id="course-detail" class="course-detail" style="display:none;">
+        <div class="info-box">
+          <h2 id="course-name">نام درس</h2>
+          <p><strong>استاد:</strong> <span id="professor-name"></span></p>
+          <p><strong>زمان کلاس:</strong> <span id="class-time"></span></p>
+          <p><strong>تعداد واحد:</strong> <span id="unit-count"></span></p>
+        </div>
+
+        <div class="section">
+          <h3>ویدیوهای درس</h3>
+          <div class="videos">
+            <video width="300" controls>
+              <source src="video1.mp4" type="video/mp4">
+            </video>
+            <video width="300" controls>
+              <source src="video2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>فایل‌های درس</h3>
+          <div class="files">
+            <!-- <a href="file1.pdf" target="_blank">فایل ۱ (PDF)</a> -->
+            <!-- <a href="file2.pdf" target="_blank">فایل ۲ (PDF)</a> -->
+            <a href="assets/نظریه زبان 1.pdf" target="_blank" class="filesEach">
+              <p>فایل 1</p>
+               <img src="assets/img/—Pngtree—pdf file icon png_7965915.png" alt="PDF File" width="50">
+            </a>
+            <a href="assets/نظریه زبان 1.pdf" target="_blank" class="filesEach">
+              <p>فایل 2</p>
+               <img src="assets/img/—Pngtree—pdf file icon png_7965915.png" alt="PDF File" width="50">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    const courseData = {
+      'نظریه زبان': {
+        professor: 'استاد لیلا ریاضی',
+        time: 'شنبه و دوشنبه - ساعت ۱۰ تا ۱۲',
+        unit: '3'
+      },
+      'برنامه نویسی وب': {
+        professor: 'استاد مریم محمدزاد',
+        time: 'یک‌شنبه و سه‌شنبه - ساعت ۱۳ تا ۱۵',
+        unit: '3'
+      },
+      'انتقال داده': {
+        professor: 'استاد محمد اسدپور',
+        time: 'شنبه و دوشنبه - ساعت ۸ تا ۱۰',
+        unit: '3'
+      },
+      'روش پژوهش و ارائه': {
+        professor: 'استاد شبنم اسکوئی',
+        time: 'چهارشنبه - ساعت ۸ تا ۱۰',
+        unit: '2'
+      },
+      'آز ریزپردازنده': {
+        professor: 'استاد ویدا اسمائیلی',
+        time: ' چهارشنبه  - ساعت ۱۰ تا ۱۲',
+        unit: '1'
+      }
+    };
+
+    function showCourse(name) {
+      const detail = document.getElementById('course-detail');
+      document.getElementById('course-name').textContent = name;
+      document.getElementById('professor-name').textContent = courseData[name].professor;
+      document.getElementById('class-time').textContent = courseData[name].time;
+      document.getElementById('unit-count').textContent = courseData[name].unit;
+      detail.style.display = 'block';
+    }
+  </script>
+
+
+
+</body>
+
+</html>
+
+
