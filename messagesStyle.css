@@ -1,0 +1,404 @@
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+
+.file-display {
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+
+.container2 {
+  display: flex;
+  height: 100vh; /* کل ارتفاع صفحه */
+  padding-top: 70px; /* جبران ارتفاع header ثابت */
+  overflow: hidden;
+}
+
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: calc(100vh - 70px); /* جبران ارتفاع header */
+  padding: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 28px;
+}
+
+
+
+
+/* --------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+  background-color: #f4f4f4;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* جلوگیری از اسکرول کل صفحه */
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  background: #5882b4;
+  color: white;
+  padding: 20px;
+  width: 210px;
+  height: 60%;
+  border-radius: 10%;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 5.15%;
+  margin-right: 2%;
+  position: sticky;
+}
+
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30%;
+}
+
+.sidebar .sidebarLine {
+  width: 100%;
+  height: 4.2px;
+  background-color: white;
+  margin-top: -15%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 13% 0;
+  cursor: pointer;
+  border: 5px solid transparent; 
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar li:hover {
+  background-color: whitesmoke;
+  border-radius: 10%;
+  color: #5882b4;
+}
+
+.sidebar li:hover a {
+  color: #5882b4;
+}
+
+
+
+/* --------------------------header---------------------------- */
+
+header {
+    height: 10%;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(54, 115, 201, 0.825);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6875rem;
+    font-weight: 600;
+    color: rgba(54, 115, 201, 0.825);
+}
+
+
+.message .logout-icn {
+    height: 6rem;
+    /* position: relative;
+    left: -3%;
+    top: -100%; */
+    margin-left: -4%;
+    margin-top: -0.2%;
+}
+
+
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+  position: absolute;
+  left: 40%;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 6rem;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 2.8125rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #ededed;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+    outline: none;
+    border: none;
+}
+
+.searchbtn {
+    width: 3.125rem;
+    height: 2.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.message {
+    gap: 2.5rem;
+    position: absolute;
+    left: -59%;
+    cursor: pointer;
+}
+
+.dpicn {
+  width: 4%;
+  height: 4%;
+  margin-left: -100%;
+}
+
+.srchicn {
+  height: 1.3rem;
+}
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+  /* background-color: #d21919; */
+  background: #f4f4f4;
+  margin-top: 8%;
+  margin-right: 2.5%;
+  margin-left: 2%;
+  text-align: center;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#last-container{
+    padding: 20px;
+}
+
+
+.container {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.imgP {
+    display: flex;
+    justify-content: center;
+}
+
+.imgP img {
+    width: 50px;
+    height: 50px;
+    margin-right: 80%;
+    margin-top: 10%;
+}
+
+.uniLink {
+    display: flex;
+    justify-content: center;
+}
+
+.uniLink a {
+    text-decoration: none;
+    color: rgb(64, 150, 255);
+}
+
+.uniLink {
+    align-items: center;
+}
+
+#last-container img {
+    width: 35%;
+    height: 15%;
+    border-radius: 10%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+
+
+
+
+
+
+/* --------------------------header---------------------------- */
+
+header {
+    height: 10%;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(54, 115, 201, 0.825);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6875rem;
+    font-weight: 600;
+    color: rgba(54, 115, 201, 0.825);
+}
+
+
+.message .logout-icn {
+    height: 6rem;
+    /* position: relative;
+    left: -3%;
+    top: -100%; */
+    margin-left: -4%;
+    margin-top: -0.2%;
+}
+
+
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+  position: absolute;
+  left: 40%;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 6rem;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 2.8125rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #ededed;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+    outline: none;
+    border: none;
+}
+
+.searchbtn {
+    width: 3.125rem;
+    height: 2.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.message {
+    gap: 2.5rem;
+    position: absolute;
+    left: -59%;
+    cursor: pointer;
+}
+
+.dpicn {
+  width: 4%;
+  height: 4%;
+  margin-left: -100%;
+}
+
+.srchicn {
+  height: 1.3rem;
+}
+
+/* -------------about us styles------------------ */
+
+.aboutUS {
+  text-decoration: none;
+  position: absolute;
+  left: 25%;
+  top: 26%;
+  background-color: #5882b4;
+  padding: 9px;
+  border-radius: 20%;
+  color: white;
+}
+
+.aboutUS:hover {
+  background-color: #75a4df;
+}
