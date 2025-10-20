@@ -1,0 +1,366 @@
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+form input, form textarea {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+
+.container2 {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  margin-top: 5%;
+}
+
+.main-content h1 {
+  font-size: 28px;
+}
+
+
+
+
+/* --------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background: #5882b4;
+  color: white;
+  padding: 20px;
+  width: 210px;
+  height: 60%;
+  border-radius: 10%;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 10%;
+  margin-right: 2%;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 30%;
+}
+
+.sidebar .sidebarLine {
+  width: 100%;
+  height: 4.2px;
+  background-color: white;
+  margin-top: -15%;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 13% 0;
+  cursor: pointer;
+  border: 5px solid transparent; 
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar li:hover {
+  background-color: whitesmoke;
+  border-radius: 10%;
+  color: #5882b4;
+}
+
+.sidebar li:hover a {
+  color: #5882b4;
+}
+
+
+
+/* --------------------------header---------------------------- */
+
+header {
+    height: 10%;
+    width: 100vw;
+    padding: 0 1rem;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(54, 115, 201, 0.825);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6875rem;
+    font-weight: 600;
+    color: rgba(54, 115, 201, 0.825);
+}
+
+
+.message .logout-icn {
+    height: 6rem;
+    /* position: relative;
+    left: -3%;
+    top: -100%; */
+    margin-left: -4%;
+    margin-top: -0.2%;
+}
+
+
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+  position: absolute;
+  left: 40%;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 6rem;
+}
+
+.searchbar input {
+    width: 90%;
+    height: 2.8125rem;
+    border-radius: 0 50px 50px 0;
+    background-color: #ededed;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+    outline: none;
+    border: none;
+}
+
+.searchbtn {
+    width: 3.125rem;
+    height: 2.8125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.message {
+    gap: 2.5rem;
+    position: absolute;
+    left: -59%;
+    cursor: pointer;
+}
+
+.dpicn {
+  width: 4%;
+  height: 4%;
+  margin-left: -100%;
+}
+
+.srchicn {
+  height: 1.3rem;
+}
+
+
+
+/* ----------------------- */
+
+
+h1 {
+    margin-bottom: 20px;
+    margin-right: 3%;
+}
+
+.profile-box, .password-change-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    margin-right: 3%;
+}
+
+.password-change-box label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.password-change-box input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.password-change-box button {
+    width: 20%;
+    padding: 12px;
+    background: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin-top: 2%;
+}
+
+.password-change-box button:hover {
+    background: #2980b9;
+}
+
+#username-display {
+  color: #3498db;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#current-password {
+  color: #3498db;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+#message.error {
+    color: red;
+}
+#message.success {
+    color: green;
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 70%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 2%;
+  margin-right: 45%;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+#overlay-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* .loader-text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px 40px;
+  border-radius: 12px;
+} */
+
+
+/* HTML: <div class="loader"></div> */
+.loader {    
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%; 
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+/* -------------about us styles------------------ */
+
+.aboutUS {
+  text-decoration: none;
+  position: absolute;
+  left: 25%;
+  top: 26%;
+  background-color: #5882b4;
+  padding: 9px;
+  border-radius: 20%;
+  color: white;
+}
+
+.aboutUS:hover {
+  background-color: #75a4df;
+}
