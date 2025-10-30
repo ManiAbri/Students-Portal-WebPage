@@ -15,6 +15,8 @@
   <header>
 
         <div class="logosec">
+          <!-- آیکون منو به صورت عکس -->
+            <img src="assets/img/header/menu.png" alt="menu" class="menu-toggle">
             <div class="logo">سامانه تبریزیم</div>
         </div>
 
@@ -129,6 +131,28 @@
   </script>
 
   <script src="request.js"></script>
+
+
+  <!-- script for menu & sidebar shape in responsive mode -->
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const sidebar = document.querySelector(".sidebar");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+
+      // بستن منو با کلیک بیرون از آن
+      document.addEventListener("click", (e) => {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+          sidebar.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+
 </body>
 
 
