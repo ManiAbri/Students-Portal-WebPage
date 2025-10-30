@@ -231,6 +231,14 @@ header {
     color: rgba(54, 115, 201, 0.825);
 }
 
+.menu-toggle {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+  /* فقط در موبایل و تبلت نمایش داده می‌شود */
+}
+
 
 .message .logout-icn {
     height: 6rem;
@@ -321,4 +329,130 @@ header {
 
 .aboutUS:hover {
   background-color: #75a4df;
+}
+
+
+
+
+
+/* -------------------- موبایل -------------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+  /* ---------header and sidebar------------*/
+  header {
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: auto;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: -26%;
+  }
+
+  .logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logout-icn {
+    display: none;
+  }
+
+  .dp {
+    width: 40%;
+    height: 40%;
+  }
+
+  .dpicn {
+    width: 35%;
+    height: 35%;
+    margin-right: 70%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+
+  .aboutUS {
+    margin-top: 1%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .searchbar {
+    display: none;
+  }
+
+  .message {
+    position: static;
+    margin-left: 0;
+    width: 40%;
+    gap: 0;
+  }
+
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 220px;
+    margin: 0;
+    border-radius: 0;
+    padding-top: 70px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+    background: #5882b4;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
+
+
+  /* ---------------- */
+
+  .content {
+    margin-top: 12%;
+  }
+
+}
+
+
+
+/* -------------------- تبلت -------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  header {
+    padding: 0 2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .searchbar {
+    left: 30%;
+  }
+
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 240px;
+    margin: 0;
+    border-radius: 0;
+    padding-top: 80px;
+    z-index: 200;
+    transition: transform 0.3s ease-in-out;
+    background: #5882b4;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
 }
